@@ -1,5 +1,31 @@
 #webform {
   background-color: var(--form-background-color);
+  padding: 1rem;
+  border-radius: 0.5em;
+
+  margin-top: 1em;
+
+
+  .radio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    gap: 1rem;
+
+    label {
+      display: inline-block;
+    }
+  }
+
+  .form-help {
+    label {
+      display: inline-block;
+    }
+  }
+
+  fieldset {
+    padding: 1em;
+  }
+
 }
 
 #form-section,

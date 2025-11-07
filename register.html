@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/burger.css" />
     <link rel="stylesheet" href="css/cards.css" />
-    <link rel="stylesheet" href="css/form.css" />
+    <link rel="stylesheet" href="css/forms.css" />
     <link rel="icon" type="image/png" href="img/fav.png" />
     <title>Emergency Site</title>
   </head>
@@ -37,10 +37,76 @@
       <h1>INDBERET</h1>
       <section id="form-section">
         <article id="form-info">
-          <h2>Overskrift</h2>
-          <p>Tekst</p>
+          <h2>Du har oververjet en alien!</h2>
+          <p>Fortel om din oplevelse</p>
         </article>
-        <form id="webform"></form>
+
+        <form id="webform">
+          <div>
+            <p><label for="form-description">Beskriv hvordan alienen så ud:</label></p>
+            <textarea id="form-description" name="alien beskrivelse" rows="4" cols="40"></textarea>
+          </div>
+
+          <div>
+            <p><label for="form-size">Hvor stor var alienen:</label></p>
+            <div class="radio-grid">
+              <div>
+                <input type="radio" id="size-small" name="alien size" value="small" />
+                <label for="size-small">Lille &lt; 1m</label>
+              </div>
+              <div>
+                <input type="radio" id="size-medium" name="alien size" value="medium" />
+                <label for="size-medium">Mellem 1-2m</label>
+              </div>
+              <div>
+                <input type="radio" id="size-large" name="alien size" value="large" />
+                <label for="size-large">Stor &gt;2m</label>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <p><label for="form-location">Hvor i landet så du alienen:</label></p>
+            <select id="form-location" name="alien landsdel">
+              <option value="nordjylland">Nordjylland</option>
+              <option value="midtjylland">Midtjylland</option>
+              <option value="sydjylland">Sydjylland</option>
+              <option value="fyn">Fyn</option>
+              <option value="sjaelland">Sjælland</option>
+              <option value="hoejsjaelland">Storkøbenhavn</option>
+              <option value="bornholm">Bornholm</option>
+            </select>
+          </div>
+
+          <div class="form-help">
+            <fieldset>
+              <legend>Vil du have hjælp til at bekæmpe alienen?</legend>
+
+              <input type="checkbox" id="form-help-net" name="help" value="net" />
+              <label for="form-help-net">Net</label><br>
+
+              <input type="checkbox" id="form-help-gun" name="help" value="pistol" />
+              <label for="form-help-gun">Pistol</label><br>
+
+              <input type="checkbox" id="form-help-stick" name="help" value="øjen-prikke-pind" />
+              <label for="form-help-stick">Øjen-prikke-pind</label><br>
+
+              <input type="checkbox" id="form-help-water" name="help" value="glas vand" />
+              <label for="form-help-water">Glas vand</label><br>
+
+              <input type="checkbox" id="form-help-spray" name="help" value="anti-alien-spray" />
+              <label for="form-help-spray">Anti-alien-spray</label>
+
+            </fieldset>
+          </div>
+
+          <div>
+            <button type="submit">Indsend</button>
+          </div>
+
+
+        </form>
+
       </section>
       <section id="form-summary">
         <h2>Summary</h2>
@@ -76,6 +142,6 @@
       </nav>
     </footer>
     <script src="js/burger.js"></script>
-    <!-- <script src="js/main.js"></script> -->
+    <script src="js/forms.js"></script>
   </body>
 </html>
