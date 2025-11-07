@@ -67,3 +67,15 @@
   --color-infobox-1-bg: #fceb94;
   --color-infobox-2-bg: #def5db;
 }
+
+#eyes , #hands , #feet {
+  opacity: 0.0;
+}
+
+#info-hands {
+  display: none;
+}
+
+#info-feet {
+  display: none;
+}
