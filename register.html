@@ -44,22 +44,22 @@
         <form id="webform">
           <div>
             <p><label for="form-description">Beskriv hvordan alienen så ud:</label></p>
-            <textarea id="form-description" name="alien beskrivelse" rows="4" cols="40"></textarea>
+            <textarea id="form-description" name="alien description" rows="4" cols="40"></textarea>
           </div>
 
           <div>
             <p><label for="form-size">Hvor stor var alienen:</label></p>
             <div class="radio-grid">
               <div>
-                <input type="radio" id="size-small" name="alien size" value="small" />
+                <input type="radio" id="size-small" name="alien size" value="Lille &lt; 1m" />
                 <label for="size-small">Lille &lt; 1m</label>
               </div>
               <div>
-                <input type="radio" id="size-medium" name="alien size" value="medium" />
+                <input type="radio" id="size-medium" name="alien size" value="Mellem 1-2m" />
                 <label for="size-medium">Mellem 1-2m</label>
               </div>
               <div>
-                <input type="radio" id="size-large" name="alien size" value="large" />
+                <input type="radio" id="size-large" name="alien size" value="Stor &gt;2m" />
                 <label for="size-large">Stor &gt;2m</label>
               </div>
             </div>
@@ -67,7 +67,7 @@
 
           <div>
             <p><label for="form-location">Hvor i landet så du alienen:</label></p>
-            <select id="form-location" name="alien landsdel">
+            <select id="form-location" name="alien location">
               <option value="nordjylland">Nordjylland</option>
               <option value="midtjylland">Midtjylland</option>
               <option value="sydjylland">Sydjylland</option>
@@ -82,19 +82,19 @@
             <fieldset>
               <legend>Vil du have hjælp til at bekæmpe alienen?</legend>
 
-              <input type="checkbox" id="form-help-net" name="help" value="net" />
+              <input type="checkbox" id="form-help-net" name="help[]" value="net" />
               <label for="form-help-net">Net</label><br>
 
-              <input type="checkbox" id="form-help-gun" name="help" value="pistol" />
+              <input type="checkbox" id="form-help-gun" name="help[]" value="pistol" />
               <label for="form-help-gun">Pistol</label><br>
 
-              <input type="checkbox" id="form-help-stick" name="help" value="øjen-prikke-pind" />
+              <input type="checkbox" id="form-help-stick" name="help[]" value="øjen-prikke-pind" />
               <label for="form-help-stick">Øjen-prikke-pind</label><br>
 
-              <input type="checkbox" id="form-help-water" name="help" value="glas vand" />
+              <input type="checkbox" id="form-help-water" name="help[]" value="glas vand" />
               <label for="form-help-water">Glas vand</label><br>
 
-              <input type="checkbox" id="form-help-spray" name="help" value="anti-alien-spray" />
+              <input type="checkbox" id="form-help-spray" name="help[]" value="anti-alien-spray" />
               <label for="form-help-spray">Anti-alien-spray</label>
 
             </fieldset>
@@ -112,6 +112,27 @@
         <h2>Summary</h2>
         <article>
           <p class="placeholder">Opsummering</p>
+          <div>
+            <h3>Hvordan så alienen ud :</h3>
+            <p id="summary-description-text">---</p>
+          </div>
+
+          <div>
+            <h3>Hvor stor var alienen :</h3>
+            <p id="summary-size-text">---</p>
+          </div>
+
+          <div>
+            <h3>Hvor i landet blev alienen set :</h3>
+            <p id="summary-location-text">---</p>
+          </div>
+
+          <div>
+            <h3>Hjælp ønsket :</h3>
+            <ul id="summary-help-text">
+              
+            </ul>
+
         </article>
       </section>
     </main>
