@@ -41,9 +41,6 @@ function hoverLeaveFeet() {
   	feet.style.opacity = "0.0";
 }
 
-
-
-
 eyes.addEventListener("click", clickEyes);
 eyes.addEventListener("mouseenter", hoverEnterEyes);
 eyes.addEventListener("mouseleave", hoverLeaveEyes);

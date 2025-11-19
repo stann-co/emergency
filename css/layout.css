@@ -40,6 +40,7 @@ nav ul {
 header ul {
   height: 100%;
   width: clamp(175px, 50%, 300px);
+  align-items: center;
 }
 footer ul {
   flex-direction: column;
