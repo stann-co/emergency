@@ -1,21 +1,27 @@
+html {
+  transition: 400ms ease-in-out;
+}
+
 :root {
+  color-scheme: light;
+
   /* Colours */
-  --color-bg: #fceb94; /* page background /*
+  --color-bg: light-dark(#bcb9c0,#333039); /* page background /*
 
   /* Header */
-  --color-head-bg: #ff4b00;
+  --color-head-bg: light-dark(#695a80,#1a2621); /* header background */
 
   /* Logotype */
-  --color-logotype-bg: #000000;
-  --color-text-logotype: #ffffff;
+  --color-logotype-bg: light-dark(#000000,#ffffff);
+  --color-text-logotype: light-dark(#ffffff,#000000);
   --font-logotype-size: 2rem;
 
   /* Global menu */
-  --color-menu-bg: #6f90eb;
+  --color-menu-bg: light-dark(#4c65a1,#2a2e3e);
   /* Links */
-  --color-link-bg: #fffae2;
-  --color-link-hover: #fff; /* used */
-  --color-link-active: #99958f; /* used */
+  --color-link-bg: light-dark(#fffae2,#2e2b3a); /* used */
+  --color-link-hover: light-dark(#fff,#000); /* used */
+  --color-link-active: light-dark(#99958f,#99958f); /* used */
   --border-radius-links: 1px;
 
   /* Headlines og rubrik */
@@ -24,11 +30,11 @@
   --font-h2-size: 1rem;
   --font-h3-size: 1rem;
   --color-headline-bg: #000000;
-  --color-headline-text-page: #fffae2;
+  --color-headline-text-page: #e2e9ff;
 
   /* Tekst */
-  --color-text: #000;
-  --color-text-inverted: #fffae2;
+  --color-text: light-dark(#000,#ffffff);
+  --color-text-inverted: light-dark(#e2efff,#a4b6b8);
 
   /*  Marginer */
   --margin-head-bottom: 5px;
@@ -37,13 +43,13 @@
   --border-radius: 5px;
 
   /* Cards */
-  --color-card-bg: #8a8585;
-  --color-cta-card-bg: #d5d2d0;
+  --color-card-bg: light-dark(#8a8585,#3a3a3a);
+  --color-cta-card-bg: light-dark(#d5d2d0,#5a5a5a);
   /* news-cards */
-  --color-news-bg: #dbdad4;
-  --color-news-bg-inverted: #585a5e;
-  --color-cta-newscard-bg: #787473;
-  --color-cta-newscard-bg-inverted: #7b7d83;
+  --color-news-bg: light-dark(#dbdad4,#444447);
+  --color-news-bg-inverted: light-dark(#585a5e,#bfbfc3);
+  --color-cta-newscard-bg: light-dark(#787473,#6b6c70);
+  --color-cta-newscard-bg-inverted: light-dark(#7b7d83,#d1d1d5);
 
   /* Fonts */
   --font-family-sans: "Rubik", ui-sans-serif;
@@ -63,11 +69,19 @@
   --form-submit-size: 1rem;
 
   /* Infographics */
-  --color-info-bg: #ffffff;
-  --color-infobox-1-bg: #fceb94;
-  --color-infobox-2-bg: #def5db;
+  --color-info-bg: light-dark(#ffffff,#222222);
+  --color-infobox-1-bg: light-dark(#35c693, #216344);
+  --color-infobox-2-bg: light-dark(#74da66, #366b2e);
 
-  --form-background-color: #ffffff;
+  --form-background-color: light-dark(#ffffff, #222222);
+
+  &.dark {
+    color-scheme: dark;
+  }
+}
+
+html {
+	interpolate-size: allow-keywords;
 }
 
 #eyes , #hands , #feet {
@@ -84,6 +98,20 @@
 
 button {
   cursor: pointer;
+}
+
+.logo {
+  height: 100%;
+  width: auto;
+  padding: 5px;
+
+}
+
+.darkmode-btn {
+	all: unset;
+  cursor: pointer;
+	padding: 0 1em;
+  font-size: 1.5em;
 }
 
 [popover] {
@@ -136,4 +164,47 @@ button {
     background: rgba(0, 0, 0, 0.5);
   }
 
+}
+
+details{
+
+	background-color: var(--form-background-color);
+	border-radius: 1em;
+
+	padding: 1em;
+	margin: 1em;
+	
+  summary{
+		display: flex;
+  	gap: 1rem;
+  	align-items: center;
+  	justify-content: space-between;
+
+		span {
+			display: inline-block;
+			font-size: 1.5em;
+			transition: .5s cubic-bezier(0, 0, 0, 0.99);;
+		}
+		&::marker {
+			content: none;
+		}	
+	}
+}
+
+details[open] {
+	summary{
+		span{
+			rotate: 360deg;
+		}
+	}
+}
+
+::details-content {
+  height: 0;
+  overflow: clip;
+  transition: .3s allow-discrete;
+}
+
+details[open]::details-content {
+  height: auto;
 }

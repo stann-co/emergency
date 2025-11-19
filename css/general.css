@@ -96,7 +96,11 @@ nav a {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  height: 3.6rem;
+}
+
+/* Global menu hover effekt - Lav den om til det, du synes */
+nav a:hover {
+  background-color: var(--color-link-hover);
 }
 
 #logotype-wrapper>a {
@@ -105,6 +109,21 @@ nav a {
   font-weight: var(--font-weight-medium);
   width: max-content;
   margin-left: 1rem;
+  display: flex;
+  height: 3.6rem;
+  margin: 0.5rem;
+
+  border-radius: 1rem;
+  span{
+    margin: auto;
+    margin-left: 0.5rem;
+  }
+
+  &:hover{
+    background-color: black;
+    -webkit-filter: invert(100%); /* safari 6.0 - 9.0 */
+    filter: invert(100%);
+  }
 }
 
 /* Global menu */
@@ -120,11 +139,6 @@ header nav li a {
 /* Pilen efter menu-tekst */
 header>nav li>a:after {
   content: " \2192";
-}
-
-/* Global menu hover effekt - Lav den om til det, du synes */
-nav a:hover {
-  background-color: var(--color-link-hover);
 }
 
 nav a:active {
